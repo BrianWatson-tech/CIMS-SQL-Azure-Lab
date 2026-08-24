@@ -6,41 +6,55 @@ CIMS began as a personal project to help me learn modern database technology whi
 
 CIMS stands for **Career Information Management System**.  The long-term purpose is to organize career history, experience, projects, skills, training, education, certifications, accomplishments, and other information that can eventually help me identify relevant information for different resume or career needs.
 
-The technical side of the project also gives me a practical way to update my database knowledge and develop hands-on experience with SQL Server and Microsoft Azure.
+The technical side of the project also gives me a practical way to update my database knowledge and develop hands-on experience with Microsoft SQL Server and Microsoft Azure.
 
-The environment I use today is not the environment where the project started.
-
-I experimented with several technologies before deciding which environment best supported what I was actually trying to learn.
+The environment I use today is not the environment where the project started.  I experimented with several technologies before deciding which environment best supported what I was actually trying to learn.
 
 ## Starting With Previous Computer and Database Experience
 
-My experience with computers goes back approximately 40 years, including experience with older database systems such as dBASE and Vulcan.
+My experience with computers goes back approximately 40 years.  Some of my earlier experience included using database systems such as dBASE and Vulcan to build relatively simple databases for practical needs.
 
-That early experience gave me familiarity with storing, organizing, and retrieving structured information.  However, modern relational databases such as Microsoft SQL Server are very different from the database systems I originally learned.
+During my military service, I used database software to create inventory and publication databases.  These helped organize information that otherwise had to be maintained and retrieved manually.
 
-I did not want to assume that experience with older database technology automatically meant I understood modern SQL Server.
+Around 1990, I was paid to develop a customer, sales, and commission database for Globe Life in Oklahoma City.  The database was designed to organize customer and sales information and help track commissions.
 
-I decided to approach SQL Server from the fundamentals while using my previous experience as a foundation.
+I later used dBASE while working at the Cockrell Hill Police Department to develop a database application supporting jail and records-related work.  The system stored prisoner and charge information and allowed information that had already been entered to be reused when preparing paperwork, including warrant and probable-cause affidavits.
 
-Instead of limiting the learning process to isolated exercises, I wanted a database project that could grow as my knowledge increased.
+The Cockrell Hill project also supported the storage and retrieval of police reports.  One of the practical goals was to reduce repetitive typing and make information easier to retrieve and reuse when completing police paperwork.
 
-CIMS became that project.
+These were much simpler database environments than the SQL Server environment I am learning today, and I do not consider that early experience equivalent to modern SQL Server development.
+
+However, the basic reason I used databases then was very similar to why I am building CIMS today: organize information so that it can be maintained, retrieved, and used more effectively.
+
+Looking back, I can also see a design principle that has remained important to me.  If information has already been entered and stored correctly, I want to find ways to reuse that information rather than requiring someone to repeatedly enter the same information.
+
+That early experience gave me familiarity with thinking about information as structured data rather than simply maintaining it in documents.
+
+Technology has changed considerably since then.  With CIMS, I am taking that earlier foundation and learning how similar information-management problems can be approached using modern relational database concepts, SQL Server, and cloud technology.
 
 ## Moving From Older Database Systems to Modern SQL
 
-One of the things I am learning through CIMS is how modern relational database design differs from the older database environments I worked with years ago.
+One of the things I am learning through CIMS is how modern relational database design differs from the older database environments I previously used.
 
-With older systems such as dBASE, much of my experience involved working with individual database files and navigating or manipulating records.  With SQL Server, I am learning to think more in terms of related sets of data and relationships that are defined within the database.
+With systems such as dBASE, much of my work involved individual database files and working directly with records.  SQL Server introduces a more structured relational approach.
 
-Two concepts that have particularly changed how I think about the database are relationships and how information is retrieved.
+Two differences have been particularly important to my learning.
 
-In CIMS, I am learning to use primary keys and foreign keys to define relationships between tables.  For example, a project can have its own ProjectID, and a task can reference that ProjectID.  This allows the database structure itself to define and help protect the relationship between the records.
+The first is how relationships between information are defined.
 
-I am also learning the difference between working through individual records and using SQL to request a set of information.  Instead of thinking primarily about moving from one record to another, I can describe the information I want and allow SQL Server to retrieve the matching rows.
+In CIMS, I am learning to use primary keys and foreign keys to establish relationships between tables.  For example, a project can have its own ProjectID, and another table can reference that ProjectID.  This allows related information to remain separated while still maintaining a defined relationship between the records.
 
-These are not just new commands for me to learn.  They represent a different way of thinking about how information should be structured, related, and retrieved.
+The second difference is how information can be retrieved.
 
-My previous database experience gives me a foundation for understanding why organized data matters.  Building CIMS is helping me update that foundation with modern relational database concepts.
+My earlier database experience involved thinking more about individual records and navigating through the information.  With SQL, I am learning to work with sets of data by describing the information I want returned.
+
+These concepts are changing the way I think about database design.
+
+The fundamental problem has not changed very much from the databases I built years ago: information needs to be organized so that it can be useful.
+
+What has changed significantly are the technologies and methods available for structuring, relating, querying, securing, and managing that information.
+
+CIMS gives me a practical way to take that earlier experience and build modern SQL Server and relational database skills on top of it.
 
 ## First Environment - Linode Virtual Machine
 
@@ -66,9 +80,7 @@ The environment then became:
 
 **Linode → Linux Virtual Machine → Docker**
 
-I was learning several things at the same time.
-
-I was working with a cloud-hosted virtual machine, using the Linux command line, installing and configuring Docker, and learning how containers operate.
+I was learning several technologies at the same time.  I was working with a cloud-hosted virtual machine, using the Linux command line, installing and configuring Docker, and learning how containers operate.
 
 ## Running SQL Server in a Container
 
@@ -98,9 +110,7 @@ Instead of continuing with an environment simply because I had already built it,
 
 The Linode environment had already accomplished something useful.  It introduced me to Linux, command-line administration, Docker, containers, and running SQL Server inside a container.
 
-I did not consider that work wasted.
-
-It helped me determine what I wanted the next phase of the project to focus on.
+I did not consider that work wasted.  It helped me determine what I wanted the next phase of the project to focus on.
 
 ## Moving to a Local Windows Environment
 
@@ -280,7 +290,7 @@ AZ-900 validates my understanding of fundamental Azure concepts.
 
 CIMS gives me a place to apply those concepts, work with the technology, troubleshoot problems, and continue developing practical skills.
 
-Passing AZ-900 was not the end of my Azure learning.  It established a foundation that I can continue building on through hands-on work.
+Passing AZ-900 was not the end of my Azure learning.  It established a foundation that I can continue build on through hands-on work.
 
 ## Why the Architecture Changed
 
@@ -334,7 +344,17 @@ Future development will be documented as I actually complete and understand the 
 
 ## What I Learned
 
-The biggest lesson from the original CIMS environment was that successfully building something does not necessarily mean it is the best environment for the objective.
+One of the things this project has reinforced is that the technology changes, but many of the problems technology is used to solve remain familiar.
+
+Years ago, I used relatively simple databases to organize inventory, publications, customer information, sales, commissions, prisoner and charge information, police reports, and other records.
+
+Today, I am learning how to approach information-management problems using relational database design, SQL Server, and Azure.
+
+I can also see similarities between some of my earlier database work and what I am trying to accomplish with CIMS.  The Cockrell Hill application reduced repetitive data entry by allowing information that had already been captured to be retrieved and reused.  CIMS follows a similar principle by organizing information so it can eventually be retrieved and reused for different career and resume needs.
+
+The technology and complexity are different, but the underlying goal of making information more useful remains similar.
+
+Another lesson from the original CIMS environment was that successfully building something does not necessarily mean it is the best environment for the objective.
 
 I successfully created a Linux virtual machine, installed Docker, and ran SQL Server inside a container.
 
